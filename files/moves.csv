@@ -1,0 +1,166 @@
+Name,Type,Power
+Pound,Normal,35
+Karate Chop*,Fighting,25
+Double Slap,Normal,10
+Comet Punch,Normal,15
+Mega Punch,Normal,20
+Pay Day,Normal,20
+Fire Punch,Fire,15
+Ice Punch,Ice,15
+Thunder Punch,Electric,15
+Scratch,Normal,35
+Vise Grip,Normal,30
+Guillotine,Normal,5
+Razor Wind,Normal,10
+Swords Dance,Normal,20
+Cut,Normal,30
+Gust*,Flying,35
+Wing Attack,Flying,35
+Whirlwind,Normal,20
+Fly,Flying,15
+Bind,Normal,20
+Slam,Normal,20
+Vine Whip,Grass,25
+Stomp,Normal,20
+Double Kick,Fighting,30
+Mega Kick,Normal,5
+Jump Kick,Fighting,10
+Rolling Kick,Fighting,15
+Sand Attack*,Ground,15
+Headbutt,Normal,15
+Horn Attack,Normal,25
+Fury Attack,Normal,20
+Horn Drill,Normal,5
+Tackle,Normal,35
+Body Slam,Normal,15
+Wrap,Normal,20
+Take Down,Normal,20
+Thrash,Normal,10
+Double-Edge,Normal,15
+Tail Whip,Normal,30
+Poison Sting,Poison,35
+Twineedle,Bug,20
+Pin Missile,Bug,20
+Leer,Normal,30
+Bite*,Dark,25
+Growl,Normal,40
+Roar,Normal,20
+Sing,Normal,15
+Supersonic,Normal,20
+Sonic Boom,Normal,20
+Disable,Normal,20
+Acid,Poison,30
+Ember,Fire,25
+Flamethrower,Fire,15
+Mist,Ice,30
+Water Gun,Water,25
+Hydro Pump,Water,5
+Surf,Water,15
+Ice Beam,Ice,10
+Blizzard,Ice,5
+Psybeam,Psychic,20
+Bubble Beam,Water,20
+Aurora Beam,Ice,20
+Hyper Beam,Normal,5
+Peck,Flying,35
+Drill Peck,Flying,20
+Submission,Fighting,20
+Low Kick,Fighting,20
+Counter,Fighting,20
+Seismic Toss,Fighting,20
+Strength,Normal,15
+Absorb,Grass,25
+Mega Drain,Grass,15
+Leech Seed,Grass,10
+Growth,Normal,20
+Razor Leaf,Grass,25
+Solar Beam,Grass,10
+Poison Powder,Poison,35
+Stun Spore,Grass,30
+Sleep Powder,Grass,15
+Petal Dance,Grass,10
+String Shot,Bug,40
+Dragon Rage,Dragon,10
+Fire Spin,Fire,15
+Thunder Shock,Electric,30
+Thunderbolt,Electric,15
+Thunder Wave,Electric,20
+Thunder,Electric,10
+Rock Throw,Rock,15
+Earthquake,Ground,10
+Fissure,Ground,5
+Dig,Ground,10
+Toxic,Poison,10
+Confusion,Psychic,25
+Psychic,Psychic,10
+Hypnosis,Psychic,20
+Meditate,Psychic,40
+Agility,Psychic,30
+Quick Attack,Normal,30
+Rage,Normal,20
+Teleport,Psychic,20
+Night Shade,Ghost,15
+Mimic,Normal,10
+Screech,Normal,40
+Double Team,Normal,15
+Recover,Normal,10
+Harden,Normal,30
+Minimize,Normal,10
+Smokescreen,Normal,20
+Confuse Ray,Ghost,10
+Withdraw,Water,40
+Defense Curl,Normal,40
+Barrier,Psychic,20
+Light Screen,Psychic,30
+Haze,Ice,30
+Reflect,Psychic,20
+Focus Energy,Normal,30
+Bide,Normal,10
+Metronome,Normal,10
+Mirror Move,Flying,20
+Self-Destruct,Normal,5
+Egg Bomb,Normal,10
+Lick,Ghost,30
+Smog,Poison,20
+Sludge,Poison,20
+Bone Club,Ground,20
+Fire Blast,Fire,5
+Waterfall,Water,15
+Clamp,Water,15
+Swift,Normal,20
+Skull Bash,Normal,10
+Spike Cannon,Normal,15
+Constrict,Normal,35
+Amnesia,Psychic,20
+Kinesis,Psychic,15
+Soft-Boiled,Normal,10
+High Jump Kick,Fighting,10
+Glare,Normal,30
+Dream Eater,Psychic,15
+Poison Gas,Poison,40
+Barrage,Normal,20
+Leech Life,Bug,10
+Lovely Kiss,Normal,10
+Sky Attack,Flying,5
+Transform,Normal,10
+Bubble,Water,30
+Dizzy Punch,Normal,10
+Spore,Grass,15
+Flash,Normal,20
+Psywave,Psychic,15
+Splash,Normal,40
+Acid Armor,Poison,20
+Crabhammer,Water,10
+Explosion,Normal,5
+Fury Swipes,Normal,15
+Bonemerang,Ground,10
+Rest,Psychic,10
+Rock Slide,Rock,10
+Hyper Fang,Normal,15
+Sharpen,Normal,30
+Conversion,Normal,30
+Tri Attack,Normal,10
+Super Fang,Normal,10
+Slash,Normal,20
+Substitute,Normal,10
+Struggle,Normal,1
