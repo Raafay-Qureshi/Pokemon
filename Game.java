@@ -4,6 +4,7 @@ public class Game {
 
     private static boolean gameEnded = false;
     public static void main(String[] args) {
+        StatusCondition.initializeStatusConditions();
         Player playerOne, playerTwo;
         Scanner scanner = new Scanner(System.in);
         System.out.println("State Player 1 name:");

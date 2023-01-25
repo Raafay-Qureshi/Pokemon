@@ -22,6 +22,7 @@ public class Moves {
                 }
             }
         }
+        moves.add(new Move("Confused", "1223", 10));
         return moves;
     }
 

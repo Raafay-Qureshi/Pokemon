@@ -69,7 +69,8 @@ public class Pokemons {
                 System.out.println(e.getMessage());
             }
         }
-        return pokemon;    }
+        return pokemon;
+    }
 
     public boolean pokemonInList(String name, ArrayList<Pokemon> pokemons) {
         for (Pokemon pokemon : pokemons) {
