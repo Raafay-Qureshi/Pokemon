@@ -10,6 +10,10 @@ public class Move {
         this.power = power;
     }
 
+    public String toString() {
+        return name;
+    }
+
     public String getName() {
         return name;
     }

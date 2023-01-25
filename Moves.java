@@ -5,10 +5,10 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Moves {
-    private ArrayList<Move> moves = new ArrayList<>();
+    private ArrayList<Move> movesList = new ArrayList<>();
 
     public Moves() {
-        moves = getRandomMoves();
+        movesList = getRandomMoves();
     }
 
     public ArrayList<Move> getRandomMoves() {
@@ -57,7 +57,7 @@ public class Moves {
         return false;
     }
 
-    public ArrayList<Move> getMoves() {
-        return moves;
+    public ArrayList<Move> getMovesList() {
+        return movesList;
     }
 }

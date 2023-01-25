@@ -7,9 +7,30 @@ import java.util.Scanner;
 public class Pokemons {
 
     private ArrayList<Pokemon> pokemons = new ArrayList<>();
+    private Pokemon currentPokemon;
 
     public Pokemons() {
         pokemons = getRandomPokemons();
+        currentPokemon = pokemons.get(0);
+    }
+
+    public String toString() {
+        return pokemons.toString();
+    }
+
+    public boolean takeDamage(double damage) {
+        if (!pokemons.isEmpty()) {
+            currentPokemon.loseHealth(damage);
+            if (currentPokemon.isDead()) {
+                System.out.println(currentPokemon + " feinted and is no longer able to battle!");
+                pokemons.remove(0);
+                if (pokemons.isEmpty()) {
+                    return true;
+                }
+                currentPokemon = pokemons.get(0);
+            }
+        }
+        return false;
     }
 
     public ArrayList<Pokemon> getRandomPokemons() {
@@ -38,7 +59,7 @@ public class Pokemons {
                 if (firstLine) {firstLine=false; continue;}
                 if (Integer.valueOf(splitInput[0]) == num) {
                     pokemon = new Pokemon(Integer.valueOf(splitInput[0]),splitInput[1], splitInput[2],
-                    Integer.valueOf(splitInput[3]), Integer.valueOf(splitInput[4]), Integer.valueOf(splitInput[5]));
+                    Double.valueOf(splitInput[3]), Integer.valueOf(splitInput[4]), Integer.valueOf(splitInput[5]));
                     return pokemon;
                 }
             }
@@ -48,8 +69,7 @@ public class Pokemons {
                 System.out.println(e.getMessage());
             }
         }
-        return pokemon;
-    }
+        return pokemon;    }
 
     public boolean pokemonInList(String name, ArrayList<Pokemon> pokemons) {
         for (Pokemon pokemon : pokemons) {
@@ -60,5 +80,9 @@ public class Pokemons {
 
     public ArrayList<Pokemon> getPokemons() {
         return pokemons;
+    }
+
+    public Pokemon getCurrentPokemon() {
+        return currentPokemon;
     }
 }
