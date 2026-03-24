@@ -8,6 +8,7 @@ public class Pokemon {
     private int defense;
     private Moves moves;
     private boolean dead;
+    private String condition;
 
     public Pokemon(int index, String name, String type, double HP, int attack, int defense) {
         this.index = index;
@@ -17,6 +18,7 @@ public class Pokemon {
         this.attack = attack;
         this.defense = defense;
         this.dead = false;
+        this.condition = "";
         if (name != "") {
             moves = new Moves();
         }
@@ -32,6 +34,10 @@ public class Pokemon {
         if (this.HP <= 0) {
             this.dead = true;
         }
+    }
+
+    public void setCondition(String condition) {
+        this.condition = condition;
     }
 
     public int getIndex() {
@@ -64,5 +70,9 @@ public class Pokemon {
     
     public boolean isDead() {
         return dead;
+    }
+
+    public String getCondition() {
+        return condition;
     }
 }

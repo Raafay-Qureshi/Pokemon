@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Player {
@@ -6,11 +7,13 @@ public class Player {
 
     private Pokemons pokemons;
     private Multiplier multiplier;
+    private Bag bag;
 
     public Player(String name) {
         this.name = name;
         this.pokemons = new Pokemons();
         this.multiplier = new Multiplier();
+        this.bag = new Bag();
     }
 
     public Object getChoiceFromRange(Scanner scanner, String message, Object[] choices) {
@@ -35,33 +38,47 @@ public class Player {
     public void chooseAction(Scanner scanner, Player enemy) {
         System.out.println("\n" + name + "'s turn!");
         System.out.println(name + "'s' pokemon: " + pokemons);
-        String[] choices = {"Fight", "Use Bag", "Change Pokemon", "Run Away"};
-        String choice = (String) getChoiceFromRange(scanner, "Choose an option!", choices);
-
-        switch (choice) {
-            case "Fight":
-                fight(scanner, enemy); break;
-            case "Use Bag":
-                useBag(); break;
-            case "Change Pokemon":
-                changePokemon(); break;
-            case "Run Away":
-                runAway(); break;
+        Pokemon playerPokemon = this.getPokemons().getCurrentPokemon();
+        String choice = "";
+        while (true) {
+            if (playerPokemon.getCondition() != "") {
+                String[] choices = {"Use Bag", "Change Pokemon", "Run Away"};
+                choice = (String) getChoiceFromRange(scanner, playerPokemon
+                + " currently has the " + playerPokemon.getCondition() + " status condition so it's unable to battle.\nChoose an option!", choices);
+            } else {
+                String[] choices = {"Fight", "Use Bag", "Change Pokemon", "Run Away"};
+                choice = (String) getChoiceFromRange(scanner, "Choose an option!", choices);
+            }
+    
+            switch (choice) {
+                case "Fight":
+                    fight(scanner, enemy); break;
+                case "Use Bag":
+                    useBag(); break;
+                case "Change Pokemon":
+                    changePokemon(); break;
+                case "Run Away":
+                    runAway(); break;
+            }
         }
     }
 
     public void fight(Scanner scanner, Player enemy) {
         Pokemon playerPokemon = this.getPokemons().getCurrentPokemon();
-        Move[] moveList = new Move[4];
-        for (int i = 0; i < 4; i++) {
-            moveList[i] = playerPokemon.getMoves().getMovesList().get(i);
+        ArrayList<Move> movesList = playerPokemon.getMoves().getMovesList();
+        Move[] moveList = new Move[movesList.size()];
+        for (int i = 0; i < movesList.size(); i++) {
+            moveList[i] = movesList.get(i);
         }
         Move move = (Move) getChoiceFromRange(scanner, "Choose a move!", moveList);
         attackPlayer(enemy, move);
     }
 
     public void useBag() {
-
+        Pokemon pokemon = this.getPokemons().getCurrentPokemon();
+        if (bag.useItem(name, pokemon)) {
+            
+        }
     }
 
     public void changePokemon() {
@@ -80,8 +97,13 @@ public class Player {
         if (enemy.getPokemons().takeDamage(damage)) {
             Game.endGame(this);
         } else {
+            String condition = StatusCondition.getStatusWithMove(move.getName());
             System.out.println(this.name + "'s " + playerPokemon + " used " + move + " on " + enemy.name + "'s " + enemyPokemon + " for a total damage of " + damage + ". "
-        + (enemyPokemon.getHP() + damage) + " --> " + enemyPokemon.getHP());
+            + (enemyPokemon.getHP() + damage) + " --> " + enemyPokemon.getHP());
+            if (!condition.equals("")) {
+                enemyPokemon.setCondition(condition);
+                System.out.println(enemyPokemon + " recieved " + condition + " status condition from the move " + move);
+            }
         }
     }
 
